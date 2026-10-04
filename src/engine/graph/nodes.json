@@ -1,0 +1,10 @@
+[
+  { "id": 1, "clave": "presupuesto", "tipo": "nucleo", "nombre": "Presupuesto urbano", "descripcion": "Gasto corriente, inversión en equipamiento público, financiación de escuelas" },
+  { "id": 2, "clave": "electores", "tipo": "actor", "nombre": "Electores", "descripcion": "Política simulada. Quieren servicios y calidad de vida en su barrio" },
+  { "id": 3, "clave": "territorio", "tipo": "entorno", "nombre": "Población urbana y ecología urbana", "descripcion": "Características socioeconómicas de la población, valor del suelo, base económica" },
+  { "id": 4, "clave": "economia", "tipo": "entorno", "nombre": "Familias y empresas", "descripcion": "Economía simulada" },
+  { "id": 5, "clave": "politicos", "tipo": "actor", "nombre": "Políticos", "descripcion": "Desean prestigio, influencia y crecimiento urbano" },
+  { "id": 6, "clave": "planners", "tipo": "actor", "nombre": "Planners", "descripcion": "Desean administración eficiente y prestigio profesional" },
+  { "id": 7, "clave": "educadores", "tipo": "actor", "nombre": "Educadores", "descripcion": "Desean un nivel determinado de calidad de los servicios escolares" },
+  { "id": 8, "clave": "promotores", "tipo": "actor", "nombre": "Promotores", "descripcion": "Desean beneficio personal" }
+]
