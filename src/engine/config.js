@@ -61,7 +61,13 @@ export const config = {
     transferenciasAnuales: 1300, // participación en tributos del Estado y Generalitat
     tipoInteresAnual: 0.03,
     umbralQuiebra: 6000, // deuda que provoca la quiebra
-    limites: { min: 0, max: 6000 } // rango de cada partida para la interfaz
+    limites: { min: 0, max: 6000 }, // rango válido de cualquier partida
+    // rango de los sliders de la interfaz (M€ anuales)
+    rangos: {
+      gastoCorriente: [1500, 3500],
+      inversionCapital: [0, 1500],
+      financiacionEscuelas: [0, 1000]
+    }
   },
 
   escuelas: {

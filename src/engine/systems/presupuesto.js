@@ -32,8 +32,11 @@ export function step(mundo, config) {
 
   if (deuda > cfg.umbralQuiebra) {
     eventos.push({ tipo: 'quiebra', enlace: 38, texto: 'La deuda supera el umbral de quiebra.' })
-  } else if (saldo < 0) {
-    eventos.push({ tipo: 'deficit', enlace: 38, texto: `Déficit trimestral de ${(-saldo).toFixed(0)} M€, se emiten bonos.` })
+  } else if (saldo < 0 && p.saldo >= 0) {
+    // solo se avisa cuando las cuentas pasan a déficit, no en cada trimestre
+    eventos.push({ tipo: 'deficit', enlace: 38, texto: `Las cuentas entran en déficit (${(-saldo).toFixed(0)} M€ por trimestre), se emiten bonos.` })
+  } else if (saldo > 0 && p.saldo < 0) {
+    eventos.push({ tipo: 'superavit', enlace: 38, texto: `Las cuentas vuelven al superávit (${saldo.toFixed(0)} M€ por trimestre).` })
   }
 
   const presupuesto = {
