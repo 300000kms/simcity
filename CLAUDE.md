@@ -5,7 +5,10 @@ Simulador de política urbana basado en el esquema de `docs/esquema.jpg`: un mod
 
 ## Estado actual
 - Fase 1 (motor mínimo) hecha: `nodes.json`, `links.json`, `config.js`, `rng.js`, `world.js`, sistemas de presupuesto, economía y territorio, `tick.js` con los flujos 38, 23 y 24, y tests.
-- `npm test` corre los tests. `npm run sim -- 16` corre la simulación en consola.
+- Fase 2 (mapa) hecha y una interfaz mínima jugable: sliders de presupuesto, colocar escuelas, ficha de celda, gráficos, eventos, avance de tiempo. Sin actores ni elecciones todavía.
+- `npm test` corre los tests. `npm run sim -- 16` corre la simulación en consola. `npm run dev` abre la app.
+- Despliegue: `.github/workflows/pages.yml` publica en GitHub Pages en cada push (Settings > Pages > Source: GitHub Actions). MapLibre 6 necesita `setWorkerUrl` con el worker empaquetado por Vite (`?worker&url`).
+- Fondo del mapa: teselas raster de CARTO (sin clave). Desde el contenedor de desarrollo no cargan por la red, en el navegador sí.
 - **`docs/esquema.jpg` no está en el repositorio.** Los orígenes y destinos de `links.json` están inferidos del texto de la leyenda y marcados con `verificado: false`. Hay que contrastarlos con el esquema antes de implementar los actores (fase 3).
 - Datos de Barcelona: CartoBCN vía espejo en GitHub (ver `src/data/barcelona/README.md`). Open Data BCN no es accesible desde el entorno de desarrollo.
 
